@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: rgb(44, 42, 42);
+  color: #f3f7ec;
+  align-items: center;
+  padding: 1.5rem 0rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.5;
+  align-items: center;
+  gap: 10rem;
+}
+
+@media (max-width: 500px) {
+  .footer {
+    max-width: 500px;
+    overflow: hidden;
+    padding: none;
+  }
+
+  .footer-top {
+    gap: 2rem;
+    line-height: 0.7cm;
+  }
+}

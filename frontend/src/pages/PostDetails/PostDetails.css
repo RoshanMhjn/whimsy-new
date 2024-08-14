@@ -1,0 +1,169 @@
+.post-details {
+  padding: 5rem 7rem;
+  background-color: #f3f7ec;
+}
+
+.post-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-edit-buttons {
+  display: flex;
+  font-size: 1.5rem;
+  gap: 0.7rem;
+}
+
+.post-user-details {
+  display: flex;
+  justify-content: space-between;
+  opacity: 80%;
+  margin-bottom: 1rem;
+}
+
+.right-date {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.post-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.post-main-image {
+  max-width: 80%;
+  height: auto;
+}
+
+.post-category {
+  display: flex;
+  margin: 2rem 0rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.post-category-title {
+  font-weight: 700;
+}
+
+.category-box {
+  background-color: rgb(203, 203, 203);
+  padding: 0.2rem;
+  font-weight: 500;
+  border-radius: 0.3rem;
+  max-width: 200px;
+  text-align: center;
+}
+
+.comment-user-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.comment-date-time {
+  display: flex;
+  gap: 0.5rem;
+  opacity: 80%;
+}
+
+.comment-edit-buttons {
+  display: flex;
+  gap: 0.5rem;
+  opacity: 80%;
+}
+
+.comment-field {
+  background-color: rgb(212, 214, 215);
+  padding: 0.5rem;
+  margin: 2rem 0rem;
+  border-radius: 1rem;
+}
+
+.comment-input {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.comment-textarea {
+  border: none;
+  width: 90%;
+  height: 3rem;
+  background-color: #fdfefb;
+  padding: 0.5rem;
+}
+
+.comment-button {
+  width: 10%;
+  height: 3rem;
+  background-color: black;
+  color: white;
+}
+
+/* .post-main-image {
+  width: 200px;
+  height: 200px;
+} */
+::placeholder {
+  font-weight: 500;
+  text-align: left;
+}
+
+@media (max-width: 500px) {
+  .post-details {
+    padding: 0rem 0rem;
+  }
+
+  .post-detail {
+    padding: 1rem 1rem;
+  }
+
+  .post-title {
+    font-size: 20px;
+  }
+
+  .post-edit-buttons {
+    font-size: 20px;
+  }
+
+  .post-user-details {
+    font-size: 14px;
+  }
+
+  .post-image-container {
+    max-width: 500px;
+    object-fit: cover;
+    padding: 1rem;
+    overflow: hidden;
+  }
+
+  .comment-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comment-textarea {
+    border: 2px solid;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .comment-button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .comment-main {
+    font-size: 16px;
+  }
+
+  .comment-area {
+    font-size: 14px;
+  }
+}

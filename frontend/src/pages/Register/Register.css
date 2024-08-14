@@ -1,0 +1,62 @@
+.register {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #f3f7ec;
+}
+
+.register-header {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.register-details {
+  background-color: #f3f7ec;
+  padding: 0.5rem;
+  width: 400px;
+  border: 3px solid black;
+  border-radius: 0.2rem;
+}
+
+.register-button {
+  height: 50px;
+  border: 3px solid black;
+  border-radius: 0.6rem;
+  font-size: medium;
+  font-weight: 600;
+  background-color: black;
+  color: #f3f7ec;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  background-color: rgb(44, 42, 42);
+}
+
+.register-login-link {
+  text-decoration: underline;
+  color: black;
+  margin-left: 0.3rem;
+}
+
+::placeholder {
+  text-align: center;
+  opacity: 0.8;
+}
+
+.error-message {
+  font-size: small;
+  font-weight: 500;
+  color: red;
+}

@@ -1,0 +1,15 @@
+.home {
+  padding: 5rem 7rem;
+  background-color: #f3f7ec;
+}
+
+.home-post-link {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 501px) {
+  .home {
+    padding: 0rem 0rem;
+  }
+}
