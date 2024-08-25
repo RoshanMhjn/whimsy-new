@@ -31,6 +31,8 @@ const EditPost = () => {
     }
   };
 
+  /* post edit function */
+
   const handleUpdate = async (e) => {
     e.preventDefault();
 
@@ -152,6 +154,9 @@ const EditPost = () => {
             className="post-main-entry"
             placeholder="Enter post description"
           />
+
+          {/* edit post button */}
+
           <button onClick={handleUpdate} className="create-post-button">
             Update
           </button>

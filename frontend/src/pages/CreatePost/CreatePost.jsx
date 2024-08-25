@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useContext, useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
@@ -33,6 +34,8 @@ const CreatePost = () => {
     setCat("");
     setCats(updatedCats);
   };
+
+  /* Create post logic */
 
   const handleCreate = async (e) => {
     e.preventDefault();
@@ -135,6 +138,9 @@ const CreatePost = () => {
             placeholder="Enter post description"
             required
           />
+
+          {/* button to create post */}
+
           <button onClick={handleCreate} className="create-post-button">
             Create
           </button>

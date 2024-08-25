@@ -1,0 +1,11 @@
+.personal-posts {
+  min-height: 100vh;
+  background-color: #f3f7ec;
+  padding: 5rem 7rem;
+}
+
+@media (max-width: 600px) {
+  .personal-posts {
+    padding: 1rem 1rem;
+  }
+}

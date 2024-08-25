@@ -78,6 +78,13 @@ const Navbar = () => {
         )}
 
         {user ? (
+          <h3>
+            <Link className="nav-link" to="/myposts/:id">
+              My Posts
+            </Link>
+          </h3>
+        ) : null}
+        {user ? (
           <h3 className="nav-link" onClick={handleLogout}>
             Logout
           </h3>

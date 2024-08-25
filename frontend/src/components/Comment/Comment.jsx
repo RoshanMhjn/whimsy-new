@@ -7,6 +7,8 @@ import { URL } from "../../url";
 import { useContext } from "react";
 import { UserContext } from "../../context/UserContext";
 
+/* Handle Delete Comment */
+
 const Comment = ({ c }) => {
   const { user } = useContext(UserContext);
   const deleteComment = async (id) => {

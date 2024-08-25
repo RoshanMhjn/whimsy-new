@@ -60,6 +60,8 @@ const PostDetails = () => {
     fetchPostComments();
   }, [postId]);
 
+  /* Create a comment */
+
   const postComment = async (e) => {
     e.preventDefault();
     try {

@@ -1,30 +1,26 @@
-import HomePosts from "../../components/HomePosts/HomePosts";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-import "./Home.css";
+import "./PersonalPosts.css";
+import { useContext, useEffect, useState } from "react";
+import { UserContext } from "../../context/UserContext";
 import axios from "axios";
 import { URL } from "../../url";
-import { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { UserContext } from "../../context/UserContext";
+import HomePosts from "../../components/HomePosts/HomePosts";
 
-const Home = () => {
+const PersonalPosts = () => {
   const { search } = useLocation();
-  //console.log(search);
   const [posts, setPosts] = useState([]);
-
   const [noResults, setNoResults] = useState(false);
-
   const { user } = useContext(UserContext);
 
-  //console.log(user);
-
-  /* fetch posts from databse */
+  console.log(user);
 
   const fetchPosts = async () => {
     try {
-      const res = await axios.get(URL + "/api/posts/" + search);
+      const res = await axios.get(URL + "/api/posts/user/" + user._id);
       setPosts(res.data);
+
       if (res.data.length === 0) {
         setNoResults(true);
       } else {
@@ -38,31 +34,29 @@ const Home = () => {
   useEffect(() => {
     fetchPosts();
   }, [search]);
-
   return (
     <>
       <Navbar />
-      <div className="home">
+      <div className="personal-posts">
+        <h1>Your Posts</h1>
         {!noResults ? (
           posts.map((post) => (
             <>
               <Link
-                className="home-post-link"
+                className="nav-link"
                 to={user ? `/posts/post/${post._id}` : "/login"}
               >
-                {/* render posts */}
                 <HomePosts key={post._id} post={post} />
               </Link>
             </>
           ))
         ) : (
-          <h3>No posts available</h3>
+          <h3> No posts available</h3>
         )}
       </div>
-
       <Footer />
     </>
   );
 };
 
-export default Home;
+export default PersonalPosts;
